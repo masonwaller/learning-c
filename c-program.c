@@ -1,25 +1,19 @@
 #include <stdio.h>
 
-// int main(){
-//     int testInteger = 5;
-//     printf("Number = %s", "hello");
-//     return 0;
-// }
-
-// int main(){
-//     int number;
-//     printf("Enter number: ");
-//     scanf("%d", &number);
-//     printf("You entered number %d", number);
-//     return 0;
-// }
-
 int main() {    
-    int number1, number2, sum;
-    printf("Enter two integers: ");
-    scanf("%d %d", &number1, &number2);
-    sum = number1 + number2;      
-    
-    printf("%d + %d = %d", number1, number2, sum);
+    char word[] = "hang";
+    int number = 5;
+    char guess;
+    scanf(fun(itoa(number, 10), guess), &guess);
+
+    printf("Your guess is %c\n", guess);
     return 0;
-}
+};
+
+char fun(number, guess){
+    char str;
+    printf("Enter a letter: \n");
+    printf("<You have %d guesses remaining>\n", number);
+    scanf("%c", &str);
+    return str;    
+};
