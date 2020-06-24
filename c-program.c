@@ -23,7 +23,7 @@ int main() {
         for (int i=0; word[i] != '\0'; i++){
             printf("%s", arr);
         };
-        printf("<You have %d strikes remaining>\n", number);
+        printf("\n<You have %d strikes remaining>\n", number);
     };
     return 0;
 };
