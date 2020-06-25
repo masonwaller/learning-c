@@ -4,8 +4,8 @@ int main() {
     char word[] = "hang";
     int number = 5;
     char guess;
-    char arr[] = "h";
-    int len = 0;
+    char arr[] = "----";
+    int len = 1;
     while(number > 0){
         printf("Enter a letter: \n");
         scanf(" %c", &guess);
@@ -15,15 +15,20 @@ int main() {
             number -= 1;
         } else {
             int q = p - word;
-            arr[len] = q;
+            arr[q] = word[q];
             len += 1;
             printf("Your guess is correct\n");
             // printf("%c\n", word[q]);
         };
-        for (int i=0; word[i] != '\0'; i++){
-            printf("%s", arr);
-        };
+        printf("%s", arr);
         printf("\n<You have %d strikes remaining>\n", number);
+        if (!strchr(arr, '-')){
+            printf("YOU WIN!!!!!!");
+            break;
+        };
+    };
+    if (number == 0){
+        printf("YOU LOSE!!!!");
     };
     return 0;
 };
