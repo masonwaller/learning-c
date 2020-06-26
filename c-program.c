@@ -4,8 +4,10 @@ int main() {
     char word[] = "hang";
     int number = 5;
     char guess;
+    printf("Have someone else type in a word for you. 4 letters! \n");
+    scanf("%s", &word);
     char arr[] = "----";
-    int len = 1;
+    printf("\n\n\n\n\n\n\n");
     while(number > 0){
         printf("Enter a letter: \n");
         scanf(" %c", &guess);
@@ -16,7 +18,6 @@ int main() {
         } else {
             int q = p - word;
             arr[q] = word[q];
-            len += 1;
             printf("Your guess is correct\n");
             // printf("%c\n", word[q]);
         };
